@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
      "t. ! queue ! nvv4l2h264enc insert-sps-pps=true ! h264parse ! mp4mux ! filesink location=guardar.mp4 async=false "
 
       // Rama 3: para reproducir localmente
-     "t. ! queue ! nvoverlaysink -e ",
+     "t. ! queue ! nvoverlaysink sync=false async=false ",
 
  NULL);
 
